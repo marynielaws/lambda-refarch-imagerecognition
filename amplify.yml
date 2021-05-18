@@ -31,6 +31,7 @@ frontend:
     preBuild:
       commands:
         - cd src/react-frontend
+		- npm install -g @aws-amplify/cli@latest
         - npm install
     build:
       commands:
