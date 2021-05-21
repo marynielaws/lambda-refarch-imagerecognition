@@ -10,6 +10,8 @@ import {Auth} from "aws-amplify";
 import Storage from '@aws-amplify/storage'
 import API, {graphqlOperation} from "@aws-amplify/api";
 
+Storage.configure(AWSConfig);
+
 export const S3ImageUpload = (props) => {
   const [uploading, setUploading] = useState(false)
   const [statuses, setStatuses] = useState({})
