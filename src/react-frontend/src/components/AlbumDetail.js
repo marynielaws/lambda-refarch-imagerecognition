@@ -8,6 +8,10 @@ import * as subscriptions from '../graphql/subscriptions'
 import { Auth } from "aws-amplify";
 import { PhotoList, S3ImageUpload } from "./PhotoList";
 
+import aws_exports from '../../aws-exports';
+
+Auth.configure(aws_exports);
+
 export const AlbumDetails = (props) => {
 	const [album, setAlbum] = useState({ name: 'Loading...', photos: [] })
 	const [photos, setPhotos] = useState([])
