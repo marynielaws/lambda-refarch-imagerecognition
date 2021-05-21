@@ -8,6 +8,7 @@
 
 import React from 'react';
 import Amplify, { Auth } from 'aws-amplify';
+import AWSStorage from '@aws-amplify/storage';
 import aws_exports from './aws-exports';
 
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
@@ -21,6 +22,7 @@ import { AlbumList, NewAlbum } from './components/Album'
 import { AlbumDetails } from "./components/AlbumDetail";
 
 Amplify.configure(aws_exports);
+AWSStorage.configure(aws_exports);
 
 function App() {
 	return (
