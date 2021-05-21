@@ -10,6 +10,7 @@ import {Auth} from "aws-amplify";
 import Storage from '@aws-amplify/storage'
 import API, {graphqlOperation} from "@aws-amplify/api";
 
+Auth.configure(AWSConfig);
 Storage.configure(AWSConfig);
 
 export const S3ImageUpload = (props) => {
