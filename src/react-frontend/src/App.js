@@ -47,7 +47,7 @@ function App() {
 				<Grid.Column>
 
 					<Route path="/" exact component={NewAlbum} />
-					<Route path="/" exact component={() => !Auth.currentAuthenticatedUser() ? null : <AlbumList />} />
+					<Route path="/" exact component={() => !AWSAuth.currentAuthenticatedUser() ? null : <AlbumList />} />
 					<Route
 						path="/albums/:albumId"
 						render={props => <AlbumDetails id={props.match.params.albumId} />} />
