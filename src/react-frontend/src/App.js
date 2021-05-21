@@ -7,9 +7,7 @@
 //  or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
 import React from 'react';
-import Amplify from '@aws-amplify/core';
-import AWSStorage from '@aws-amplify/storage';
-import { Auth as AWSAuth } from 'aws-amplify';
+import Amplify, { Auth, Storage } from 'aws-amplify';
 import aws_exports from './aws-exports';
 
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
@@ -23,8 +21,8 @@ import { AlbumList, NewAlbum } from './components/Album'
 import { AlbumDetails } from "./components/AlbumDetail";
 
 Amplify.configure(aws_exports);
-AWSAuth.configure(aws_exports);
-AWSStorage.configure(aws_exports);
+Auth.configure(aws_exports);
+Storage.configure(aws_exports);
 
 
 function App() {
@@ -47,7 +45,7 @@ function App() {
 				<Grid.Column>
 
 					<Route path="/" exact component={NewAlbum} />
-					<Route path="/" exact component={() => !AWSAuth.currentAuthenticatedUser() ? null : <AlbumList />} />
+					<Route path="/" exact component={() => !Auth.currentAuthenticatedUser() ? null : <AlbumList />} />
 					<Route
 						path="/albums/:albumId"
 						render={props => <AlbumDetails id={props.match.params.albumId} />} />
