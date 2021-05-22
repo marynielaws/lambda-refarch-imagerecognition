@@ -40,7 +40,7 @@ export const AlbumDetails = (props) => {
 				{ owner: user.username })).subscribe({
 					next: (data) => {
 						const photo = data.value.data.onCreatePhoto
-						if (photo.albumId !== props.id) return
+						if (photo == null || photo.albumId !== props.id) return
 						setPhotos(p => p.concat([photo]))
 
 						setProcessingStatuses((prevState => {
