@@ -438,7 +438,7 @@
           "description" : null,
           "args" : [ ],
           "type" : {
-            "kind" : "NON_NULL",
+            "kind" : "SCALAR",
             "name" : null,
             "ofType" : {
               "kind" : "SCALAR",
@@ -453,7 +453,7 @@
           "description" : null,
           "args" : [ ],
           "type" : {
-            "kind" : "NON_NULL",
+            "kind" : "SCALAR",
             "name" : null,
             "ofType" : {
               "kind" : "SCALAR",
@@ -760,7 +760,7 @@
           "description" : null,
           "args" : [ ],
           "type" : {
-            "kind" : "NON_NULL",
+            "kind" : "SCALAR",
             "name" : null,
             "ofType" : {
               "kind" : "SCALAR",
@@ -775,7 +775,7 @@
           "description" : null,
           "args" : [ ],
           "type" : {
-            "kind" : "NON_NULL",
+            "kind" : "SCALAR",
             "name" : null,
             "ofType" : {
               "kind" : "SCALAR",
