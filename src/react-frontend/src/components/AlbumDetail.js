@@ -68,6 +68,7 @@ export const AlbumDetails = (props) => {
 				{ owner: user.username })).subscribe({
 					next: (data) => {
 						const photo = data.value.data.onUpdatePhoto
+						console.log(JSON.stringify(data))
 						if (photo == null) return
 						if (photo.albumId !== props.id) return
 						setPhotos(p => {
